@@ -1,5 +1,169 @@
 Santiago Rapetti, Aicardi Santino, Eric quispe
-A) Usando "git fetch" y luego el "git merge"
+A) Usando "git fetch" y despues el "git merge"
 B) No 
 c - tampoco, solo al repositorio original (BETA)
 d - No se pierden, pero si hay conflictos entre mis cambios y los del repo original, Git pide arreglarlo
+e - 
+Integrantes del equipo:
+
+ALFA: Santiago Rapetti
+BETA: Santino Aicardi
+GAMMA: Eric Quispe
+
+Pasos que seguimos y comandos que usamos:
+Punto 1
+
+Santino creo desde GitHub el repositorio llamado "TP_SO_i2_Equipo".
+
+Al momento de crearlo, agrego un archivo "README.md" y tambien un archivo "fork.txt".
+
+Despues creo el archivo "respuesta_I2_EquipoX.txt" y ahi escribio los nombres de los tres integrantes del grupo.
+
+despues subio todo al repositorio.
+
+Punto 2
+
+Eric entro al repositorio de Santino desde GitHub y le hizo un Fork para tener su copia.
+
+Yo (Santiago) hice lo mismo: entre al mismo repositorio y tambien hice Fork para tener mi propia version.
+
+Punto 3
+
+Eric clono su repositorio en su computadora con:
+
+git clone https://github.com/usuario_gamma/TP_SO_i2_Equipo.git
+cd TP_SO_i2_Equipo
+
+Despues abrio el archivo "fork.txt" y agrego su nombre, apellido, la IP de su maquina y la hora.
+
+Guardo los cambios y ejecuto:
+
+git add .
+git commit -m "GAMMA: Mis datos"
+git push origin main
+Punto 4
+
+Yo (Santiago) hice lo mismo desde mi fork:
+
+git clone https://github.com/usuario_alfa/TP_SO_i2_Equipo.git
+cd TP_SO_i2_Equipo
+
+Abri el archivo "fork.txt" y agregue mis datos: nombre, apellido, IP y hora.
+
+Despues guarde todo y ejecute:
+
+git add .
+git commit -m "ALFA: Mis datos"
+git push origin main
+Punto 5
+
+Santino trabajo en el repositorio original.
+
+Entro a su copia local con:
+
+git clone https://github.com/usuario_beta/TP_SO_i2_Equipo.git
+cd TP_SO_i2_Equipo
+
+Y creo un archivo nuevo llamado "NuevoDato.txt".
+
+despues subio los cambios:
+
+git add .
+git commit -m "BETA: Archivo NuevoDato.txt"
+git push origin main
+Punto 6
+
+Tanto Eric como yo actualizamos nuestros repositorios para traer los cambios del repositorio original de Santino:
+
+git remote add upstream https://github.com/usuario_beta/TP_SO_i2_Equipo.git
+git fetch upstream
+git merge upstream/main
+git push origin main
+Punto 7
+
+Eric abrio el archivo "respuesta_I2_EquipoX.txt" y agrego las respuestas a y b.
+
+Despues lo subio con:
+
+git add .
+git commit -m "GAMMA: Respuestas a y b"
+git push origin main
+
+despues creo un Pull Request hacia el repositorio de Santino, y el lo acepto.
+
+Santino, en su repositorio, agrego las respuestas c y d al mismo archivo y subio los cambios normalmente.
+
+Despues yo (Santiago) actualice mi repositorio con los cambios del grupo:
+
+git fetch upstream
+git merge upstream/main
+
+Abri el archivo y agregue la respuesta e, que era el listado completo de comandos del trabajo.
+
+despues subi todo:
+
+git add .
+git commit -m "ALFA: Pongo el paso a paso final"
+git push origin main
+
+Finalmente hice el ultimo Pull Request hacia el repositorio de Santino, y el lo acepto.
+
+Abrí el archivo "fork.txt" y agregué mis datos: nombre, apellido, IP y hora.
+
+Después guardé todo y ejecuté:
+
+git add .
+git commit -m "ALFA: Mis datos"
+git push origin main
+Punto 5 
+
+Santino trabajó en el repositorio original.
+
+Entró a su copia local con:
+
+git clone https://github.com/usuario_beta/TP_SO_i2_Equipo.git
+cd TP_SO_i2_Equipo
+
+Y creó un archivo nuevo llamado "NuevoDato.txt".
+
+despues subió los cambios:
+
+git add .
+git commit -m "BETA: Archivo NuevoDato.txt"
+git push origin main
+Punto 6 
+
+Tanto Eric como yo actualizamos nuestros repositorios para traer los cambios del repositorio original de BETA:
+
+git remote add upstream https://github.com/usuario_beta/TP_SO_i2_Equipo.git
+git fetch upstream
+git merge upstream/main
+git push origin main
+Punto 7 (GAMMA, BETA y ALFA)
+
+Eric abrió el archivo "respuesta_I2_EquipoX.txt" y agregó las respuestas a y b.
+
+Después lo subió con:
+
+git add .
+git commit -m "GAMMA: Respuestas a y b"
+git push origin main
+
+despues creó un Pull Request hacia el repositorio de Santino, y él lo aceptó.
+
+Santino, en su repositorio, agregó las respuestas c y d al mismo archivo y subió los cambios normalmente.
+
+Después yo (Santiago) actualicé mi repositorio con los cambios del grupo:
+
+git fetch upstream
+git merge upstream/main
+
+Abrí el archivo y agregué la respuesta e, que era el listado completo de comandos del trabajo.
+
+Despues subí todo:
+
+git add .
+git commit -m "ALFA: Pongo el paso a paso final"
+git push origin main
+
+Finalmente hice el último Pull Request hacia el repositorio de Santino, y él lo aceptó.
