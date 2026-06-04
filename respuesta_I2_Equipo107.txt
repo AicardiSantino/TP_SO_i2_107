@@ -1,0 +1,2 @@
+A) Usando "git fetch" y luego el "git merge"
+B) No 
