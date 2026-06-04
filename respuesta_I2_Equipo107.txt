@@ -1,2 +1,5 @@
+Santiago Rapetti, Aicardi Santino, Eric quispe
 A) Usando "git fetch" y luego el "git merge"
 B) No 
+c - tampoco, solo al repositorio original (BETA)
+d - No se pierden, pero si hay conflictos entre mis cambios y los del repo original, Git pide arreglarlo
